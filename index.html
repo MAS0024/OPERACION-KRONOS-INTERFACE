@@ -23,25 +23,51 @@
     </div>
 
     <div id="screen-menu" class="screen">
-        <div class="menu-container">
+        <div class="menu-bg-vignette"></div>
+        <div class="menu-horizontal-strip"></div>
+        
+        <div class="menu-guide-line"></div>
+        <div class="menu-line-left"></div>
+
+        <div class="menu-content-wrapper">
+            
             <div class="menu-item" id="menu-0" onmouseenter="hoverMenu(0)" onclick="clickMenu(0)">
-                <span class="menu-icon" style="color: #000; font-weight: bold;">⚠</span> 
-                OPERACIONES ISLA
+                <div class="menu-col-icon">
+                    <svg class="menu-svg" viewBox="0 0 100 100">
+                        <path d="M10 80 L45 20 L62 55 L80 30 L95 80 Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <div class="menu-col-text">OPERACIONES ISLA</div>
             </div>
+
             <div class="menu-item" id="menu-1" onmouseenter="hoverMenu(1)" onclick="clickMenu(1)">
-                <span class="menu-icon" style="color: #000; font-weight: bold;">★</span> 
-                SUPERS
+                <div class="menu-col-icon">
+                    <svg class="menu-svg" viewBox="0 0 100 100">
+                        <path d="M30 50 A 20 20 0 0 1 70 50" fill="none" stroke="currentColor" stroke-width="0"/> 
+                        <path d="M28 55 C28 30 72 30 72 55 L 85 85 L 75 85 L 65 65 L 55 85 L 45 85 L 35 65 L 25 85 L 15 85 Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <div class="menu-col-text">SUPERS</div>
             </div>
+
             <div class="menu-item" id="menu-2" onmouseenter="hoverMenu(2)" onclick="clickMenu(2)">
-                <span class="menu-icon" style="color: #000; font-weight: bold;">◷</span> 
-                CONTEO REGRESIVO
+                <div class="menu-col-icon">
+                    <svg class="menu-svg" viewBox="0 0 100 100">
+                        <rect x="42" y="5" width="16" height="10" fill="currentColor"/>
+                        <rect x="46" y="15" width="8" height="6" fill="currentColor"/>
+                        <path d="M80 25 L88 18 L82 12 L74 19 Z" fill="currentColor"/>
+                        <path d="M20 25 L12 18 L18 12 L26 19 Z" fill="currentColor"/>
+                        <path d="M50 21 A 38 38 0 1 0 88 59 A 38 38 0 0 0 50 21 Z M 53 59 L 68 74 L 64 78 L 49 63 L 49 35 L 53 35 L 53 59 Z" fill="currentColor" fill-rule="evenodd"/>
+                    </svg>
+                </div>
+                <div class="menu-col-text">CONTEO REGRESIVO</div>
             </div>
+
         </div>
     </div>
 
     <div id="screen-supers" class="screen">
         <div class="back-to-menu" onclick="navTo('screen-menu')"><span style="margin-right:15px; font-size:1.5em;">◀</span></div>
-        
         <div class="supers-header-container">
             <div class="header-col-left">
                 <span class="header-title">OPPONENT</span>
@@ -51,10 +77,8 @@
                 <span class="header-title">PROTOTYPE</span>
             </div>
         </div>
-        
         <div class="nav-arrow nav-left" onclick="manualChangeSong('prev')">&#9664;</div>
         <div class="nav-arrow nav-right" onclick="manualChangeSong('next')">&#9654;</div>
-
         <div class="split-layout">
             <div class="col-left">
                 <div class="img-wrapper">
@@ -66,7 +90,6 @@
                     <div class="song-title" id="super-powers">POWERS: CONTROL OF WIND AND STORMS</div>
                 </div>
             </div>
-            
             <div class="col-right">
                 <div class="img-wrapper">
                     <div class="bg-layer" id="droid-img"></div>
@@ -94,12 +117,9 @@
 
     <div id="screen-omnidroid" class="screen">
         <div class="back-to-menu" onclick="navTo('screen-menu')"><span style="margin-right:15px; font-size:1.5em;">◀</span></div>
-        
         <div class="kronos-display-area">
-            
             <div id="panel-phase-0" class="phase-panel active-panel p0-layout">
                 <div class="p0-header-container"></div>
-
                 <div class="p0-title-area">
                     <h1 class="p0-main-title">OMNIDROID</h1>
                     <div class="p0-sub-container">
@@ -112,101 +132,51 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="p0-schematic-container">
-                    <img src="./img/Kronos/omnidroid_cut_upscale.webp" class="p0-schematic-img">
-                </div>
-                
-                <div class="p0-data-left">
-                    8 8 3 4<br>4 410 0<br>5 070 30515050536<br>01 199 5<br>435 5905 6<br>
-                    5 0<br>111 4434 41 11 1809<br>0083 30 0<br>39 4<br>49501 11 116 5<br>
-                    4 4300020 0<br>888 33 7
-                </div>
-                <div class="p0-data-right">
-                    030547<br>5 5040 05301<br><br>
-                    272 230 092<br>00 01 14 49 90 00301<br><br>
-                    0000 020022<br>790101 10 07 73 07 7<br>
-                    0 057 74505
-                </div>
+                <div class="p0-schematic-container"><img src="./img/Kronos/omnidroid_cut_upscale.webp" class="p0-schematic-img"></div>
+                <div class="p0-data-left">8 8 3 4<br>4 410 0<br>5 070 30515050536<br>01 199 5<br>435 5905 6<br>5 0<br>111 4434 41 11 1809<br>0083 30 0<br>39 4<br>49501 11 116 5<br>4 4300020 0<br>888 33 7</div>
+                <div class="p0-data-right">030547<br>5 5040 05301<br><br>272 230 092<br>00 01 14 49 90 00301<br><br>0000 020022<br>790101 10 07 73 07 7<br>0 057 74505</div>
             </div>
-    
             <div id="panel-phase-1" class="phase-panel p1-exact-layout">
                 <div class="p1-side-columns">
                     <div class="data-col-left">87 73 33 3<br>5780 0 12 11<br>11 8 99 22<br>01 12 23 31<br>114 44 43 28</div>
                     <div class="data-col-right">0 025 57307<br>7 75 58 859<br>3 328561 1<br>188 84 419</div>
                 </div>
-                
                 <div class="p1-header-container">
-                    <div class="p1-loading-box">
-                        <div class="box-header">LOADING SEQUENCE</div>
-                        <div class="box-list">1> OMNIDROID DELIVERY MODE<br>2> GANTRY LOADING<br>3> LAUNCH SEQUENCE</div>
-                    </div>
+                    <div class="p1-loading-box"><div class="box-header">LOADING SEQUENCE</div><div class="box-list">1> OMNIDROID DELIVERY MODE<br>2> GANTRY LOADING<br>3> LAUNCH SEQUENCE</div></div>
                 </div>
-
-                <div class="p1-title-area">
-                    <div class="p1-sub-title">LOADING SEQUENCE</div>
-                    <div class="p1-main-title">PHASE 1</div>
-                </div>
-
+                <div class="p1-title-area"><div class="p1-sub-title">LOADING SEQUENCE</div><div class="p1-main-title">PHASE 1</div></div>
                 <div class="p1-stage-area">
                     <div class="connection-bar"><div class="transport-light"></div></div>
                     <div class="bot-container"><div class="p1-label bot-label">OMNIDROID</div><img src="./img/Kronos/fase 1/omnidroid.webp" class="bot-element"></div>
-                    <div class="rocket-container">
-                        <div class="p1-label rocket-label-top">OMNIDROID<br>SLIDER</div>
-                        <img src="./img/Kronos/fase 1/cohete.webp" class="rocket-element">
-                        <div class="p1-label rocket-label-bottom">DELIVERY<br>VEHICLE</div>
-                    </div>
+                    <div class="rocket-container"><div class="p1-label rocket-label-top">OMNIDROID<br>SLIDER</div><img src="./img/Kronos/fase 1/cohete.webp" class="rocket-element"><div class="p1-label rocket-label-bottom">DELIVERY<br>VEHICLE</div></div>
                     <div class="rocket-sphere-light"></div>
                 </div>
             </div>
-    
             <div id="panel-phase-2" class="phase-panel p2-exact-layout">
                 <div class="p2-side-columns">
                     <div class="p2-data-col-left">44 4 44 43 23 2<br>10834 45 665 34 4<br>335355 5103 57 7<br>88 89 427 7<br>0 07 78 88 87615 5</div>
                     <div class="p2-data-col-right">5987 701 102 214<br>1 11 155 57 72 275<br>001 1121 1<br>5 584 499 622 36 002 2</div>
                 </div>
-                
                 <div class="p2-header-container">
-                    <div class="p2-info-box">
-                        <div class="p2-box-header">STAGE DELIVERY</div>
-                        <div class="p2-box-list">1> ICSM DEPLOYMENT<br>2> GLIDER SEPARATION<br>3> OMNIDROID ACTIVATION</div>
-                    </div>
+                    <div class="p2-info-box"><div class="p2-box-header">STAGE DELIVERY</div><div class="p2-box-list">1> ICSM DEPLOYMENT<br>2> GLIDER SEPARATION<br>3> OMNIDROID ACTIVATION</div></div>
                 </div>
-
-                <div class="p2-title-area">
-                    <div class="p2-sub-title">STAGE DELIVERY</div>
-                    <div class="p2-main-title">PHASE 2</div>
-                </div>
-
+                <div class="p2-title-area"><div class="p2-sub-title">STAGE DELIVERY</div><div class="p2-main-title">PHASE 2</div></div>
                 <div class="p2-stage-area">
-                    <div class="p2-label lbl-launch">LAUNCH POINT</div>
-                    <div class="p2-label lbl-delivery">DELIVERY VEHICLE</div>
-                    <div class="p2-label lbl-slider">SLIDER DEPLOYMENT</div>
-                    <div class="p2-label lbl-landing">LANDING POINT</div>
+                    <div class="p2-label lbl-launch">LAUNCH POINT</div><div class="p2-label lbl-delivery">DELIVERY VEHICLE</div><div class="p2-label lbl-slider">SLIDER DEPLOYMENT</div><div class="p2-label lbl-landing">LANDING POINT</div>
                     <div class="p2-trajectory-arc"></div>
                     <div class="p2-world-bg"><img src="./img/Kronos/fase2/isla_ciudad.webp" class="world-img"></div>
                     <div class="p2-rocket-wrapper"><img src="./img/Kronos/fase2/mini-ship.webp" class="p2-rocket-img"></div>
                 </div>
             </div>
-    
             <div id="panel-phase-3" class="phase-panel p3-exact-layout">
                 <div class="p3-side-columns">
                     <div class="p3-data-col-left">88 99 22 11<br>67242 924392 0<br>70031 155 5460 554<br>444115 5<br>5 553 35 37 72 352</div>
                     <div class="p3-data-col-right">99 2477 78 9919 5<br>0 005 52 2909 55 5<br>2 23 35 52 200 0305 5<br>722447<br>9 9082 27 70122</div>
                 </div>
-                
                 <div class="p3-header-container">
-                    <div class="p3-info-box">
-                        <div class="p3-box-header">ACTIVATION</div>
-                        <div class="p3-box-list">1> SCAN TARGET ZONE<br>2> OFFENSIVE ENGAGEMENT<br>3> REMOTE OVERRIDE</div>
-                    </div>
+                    <div class="p3-info-box"><div class="p3-box-header">ACTIVATION</div><div class="p3-box-list">1> SCAN TARGET ZONE<br>2> OFFENSIVE ENGAGEMENT<br>3> REMOTE OVERRIDE</div></div>
                 </div>
-
-                <div class="p3-title-area">
-                    <div class="p3-sub-title">ACTIVATION</div>
-                    <div class="p3-main-title">PHASE 3</div>
-                </div>
-
+                <div class="p3-title-area"><div class="p3-sub-title">ACTIVATION</div><div class="p3-main-title">PHASE 3</div></div>
                 <div class="p3-stage-area">
                     <img src="./img/Kronos/fase3/phase-3.webp" class="p3-img-layer p3-intact">
                     <img src="./img/Kronos/fase3/phase-3-destroyed.webp" class="p3-img-layer p3-destroyed">
@@ -214,9 +184,7 @@
                     <div class="p3-impact-flash"></div>
                 </div>
             </div> 
-            
         </div> 
-        
         <div class="footer-kronos">
             <div class="footer-title">OPERATION KRONOS</div>
             <div class="phase-bar">
