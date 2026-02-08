@@ -22,39 +22,39 @@ let isAutoPlaying = false;
 const supersList = [
     { 
         name: "TRADEWIND", 
-        powers: "POWERS: ELEMENTAL CONTROL OF WIND AND STORMS", 
+        powers: "PODERES: CONTROL ELEMENTAL DE VIENTO Y TORMENTAS", 
         img: "./img/SUPERS/1-dynaguy.png", 
-        status: "TERMINATED",
+        status: "TERMINADO",
         threat: "5.8", 
         
         model: "OMNIDROID v.X4", 
-        features: "FEATURES: QUADRA-PEDAL LOCOMOTION, GRAPPLING-CLAWS, SENSORY ARRAY.",
+        features: "CARACTERÍSTICAS: LOCOMOCIÓN CUADRÚPEDA, GARRAS DE AGARRE, MATRIZ SENSORIAL.",
         modelImg: "./img/PROTOTIPOS/1.png", 
-        modelStatus: "ACTIVE"
+        modelStatus: "ACTIVO"
     },
     { 
         name: "GAZERBEAM", 
-        powers: "POWERS: GENERATION OF HEAT BLASTS FROM EYES", 
+        powers: "PODERES: GENERACIÓN DE RÁFAGAS DE CALOR DESDE LOS OJOS", 
         img: "./img/SUPERS/2-downburst.png", 
-        status: "ACTIVE",
+        status: "ACTIVO",
         threat: "6.3",
         
         model: "OMNIDROID v.X5", 
-        features: "FEATURES: OMNI-DIRECTIONAL SENSORS, IMPROVED AI, HEAT SHIELDS.",
+        features: "CARACTERÍSTICAS: SENSORES OMNIDIRECCIONALES, IA MEJORADA, ESCUDOS TÉRMICOS.",
         modelImg: "./img/PROTOTIPOS/1.png",
-        modelStatus: "TERMINATED"
+        modelStatus: "TERMINADO"
     },
     { 
         name: "MR. INCREDIBLE", 
-        powers: "POWERS: ENHANCED STRENGTH AND DURABILITY", 
+        powers: "PODERES: FUERZA Y DURABILIDAD MEJORADAS", 
         img: "./img/SUPERS/2 -downburst.png", 
-        status: "TERMINATED", 
+        status: "TERMINADO", 
         threat: "9.1",
         
         model: "OMNIDROID v.10", 
-        features: "FEATURES: SIX-LEGGED LOCOMOTION, AI LEARNING, INDESTRUCTIBLE HULL.",
+        features: "CARACTERÍSTICAS: LOCOMOCIÓN DE SEIS PATAS, APRENDIZAJE IA, CASCO INDESTRUCTIBLE.",
         modelImg: "./img/PROTOTIPOS/2.png",
-        modelStatus: "READY"
+        modelStatus: "LISTO"
     }
 ];
 let currentSongIdx = 0;
@@ -84,7 +84,7 @@ function checkPass() {
         AudioPlayer.play('error'); 
         const display = document.getElementById('pass-display');
         display.style.color = 'var(--alert-red)';
-        display.innerHTML = 'DENIED<span class="cursor-blink">_</span>';
+        display.innerHTML = 'DENEGADO<span class="cursor-blink">_</span>';
         i.value = '';
         setTimeout(() => { 
             display.style.color = 'var(--dark-ui)'; 
@@ -100,6 +100,11 @@ function navTo(id) {
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
     document.getElementById(id).classList.add('active');
     
+    if(id !== 'screen-omnidroid') {
+        const sharedOverlay = document.getElementById('phases-overlay');
+        if(sharedOverlay) sharedOverlay.classList.remove('active');
+    }
+
     if(id === 'screen-password') { 
         const p = document.getElementById('pass-input'); 
         p.value = ''; 
@@ -192,7 +197,7 @@ function startAutoPlay() {
     autoPlayInterval = setInterval(() => { 
         currentSongIdx = (currentSongIdx + 1) % supersList.length; 
         updateSuperDisplay(); 
-    }, 2000); 
+    }, 1500); 
 }
 
 function stopAutoPlay() { 
@@ -216,7 +221,7 @@ function updateSuperDisplay() {
     
     document.getElementById('super-name').innerText = s.name; 
     document.getElementById('super-powers').innerText = s.powers; 
-    document.getElementById('super-threat').innerText = "THREAT RATING: " + s.threat;
+    document.getElementById('super-threat').innerText = "NIVEL DE AMENAZA: " + s.threat;
     
     document.getElementById('droid-model').innerText = s.model;
     document.getElementById('droid-features').innerText = s.features;
@@ -233,18 +238,24 @@ function updateSuperDisplay() {
     void superBar.offsetWidth; 
     void droidBar.offsetWidth;
 
-    if (s.status === 'TERMINATED') { 
-        superBar.querySelector('.terminated-text').innerText = "TERMINATED";
+    if (s.status === 'TERMINADO') { 
+        superBar.querySelector('.terminated-text').innerText = "TERMINADO";
         superBar.classList.add('active-alert'); 
     }
 
-    if (s.modelStatus === 'TERMINATED' || s.modelStatus === 'DESTROYED') { 
-        droidBar.querySelector('.terminated-text').innerText = s.modelStatus;
+    let droidStatusText = s.modelStatus;
+    if(droidStatusText === 'TERMINATED') droidStatusText = 'TERMINADO';
+    if(droidStatusText === 'DESTROYED') droidStatusText = 'DESTRUIDO';
+    if(droidStatusText === 'ACTIVE') droidStatusText = 'ACTIVO';
+    if(droidStatusText === 'READY') droidStatusText = 'LISTO';
+
+    if (s.modelStatus === 'TERMINADO' || s.modelStatus === 'DESTRUIDO' || s.modelStatus === 'TERMINATED' || s.modelStatus === 'DESTROYED') { 
+        droidBar.querySelector('.terminated-text').innerText = droidStatusText;
         droidBar.classList.add('active-alert'); 
     }
 
-    if (s.status === 'TERMINATED' || s.modelStatus === 'TERMINATED' || s.modelStatus === 'DESTROYED') {
-        setTimeout(() => AudioPlayer.play('alert'), 500);
+    if (s.status === 'TERMINADO' || s.modelStatus === 'TERMINADO' || s.modelStatus === 'DESTRUIDO') {
+        setTimeout(() => AudioPlayer.play('alert'), 250);
     }
 }
 
@@ -267,6 +278,15 @@ function setPhase(n) {
         }
     }
 
+    const sharedOverlay = document.getElementById('phases-overlay');
+    if(sharedOverlay) {
+        if(n >= 1 && n <= 3) {
+            sharedOverlay.classList.add('active');
+        } else {
+            sharedOverlay.classList.remove('active');
+        }
+    }
+
     const buttons = document.querySelectorAll('.phase-num');
     buttons.forEach(btn => btn.classList.remove('selected'));
     
@@ -274,11 +294,19 @@ function setPhase(n) {
     if(selectedBtn) selectedBtn.classList.add('selected');
 }
 
-const targetDate = new Date('2026-04-01T00:00:00').getTime();
+const countDownDuration = (8 * 60 * 60 * 1000) + (10 * 60 * 1000) + (42 * 1000);
+const targetDate = new Date().getTime() + countDownDuration;
+
 function updateCountdown() { 
     const now = new Date().getTime(), d = targetDate - now; 
-    if(d < 0) return; 
-    document.getElementById("cd-days").innerText = String(Math.floor(d / 86400000)).padStart(2, '0'); 
+    
+    if(d < 0) {
+        document.getElementById("cd-hours").innerText = "00"; 
+        document.getElementById("cd-mins").innerText = "00"; 
+        document.getElementById("cd-secs").innerText = "00";
+        return;
+    }
+
     document.getElementById("cd-hours").innerText = String(Math.floor((d % 86400000) / 3600000)).padStart(2, '0'); 
     document.getElementById("cd-mins").innerText = String(Math.floor((d % 3600000) / 60000)).padStart(2, '0'); 
     document.getElementById("cd-secs").innerText = String(Math.floor((d % 60000) / 1000)).padStart(2, '0'); 

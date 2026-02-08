@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OPERATION KRONOS</title>
+    <title>OPERACIÓN KRONOS</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,11 +70,11 @@
         <div class="back-to-menu" onclick="navTo('screen-menu')"><span style="margin-right:15px; font-size:1.5em;">◀</span></div>
         <div class="supers-header-container">
             <div class="header-col-left">
-                <span class="header-title">OPPONENT</span>
-                <span class="header-threat" id="super-threat">THREAT RATING: 5.8</span>
+                <span class="header-title">OPONENTE</span>
+                <span class="header-threat" id="super-threat">NIVEL DE AMENAZA: 5.8</span>
             </div>
             <div class="header-col-right">
-                <span class="header-title">PROTOTYPE</span>
+                <span class="header-title">PROTOTIPO</span>
             </div>
         </div>
         <div class="nav-arrow nav-left" onclick="manualChangeSong('prev')">&#9664;</div>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="info-panel">
                     <div class="song-artist" id="super-name">TRADEWIND</div>
-                    <div class="song-title" id="super-powers">POWERS: CONTROL OF WIND AND STORMS</div>
+                    <div class="song-title" id="super-powers">PODERES: CONTROL DE VIENTO Y TORMENTAS</div>
                 </div>
             </div>
             <div class="col-right">
@@ -97,7 +97,7 @@
                 </div>
                 <div class="info-panel">
                     <div class="instrument-name" id="droid-model">OMNIDROID v.X4</div>
-                    <div class="instrument-desc" id="droid-features">FEATURES: QUADRA-PEDAL LOCOMOTION...</div>
+                    <div class="instrument-desc" id="droid-features">CARACTERÍSTICAS: LOCOMOCIÓN CUADRÚPEDA...</div>
                 </div>
             </div>
         </div>
@@ -107,76 +107,116 @@
         <div class="back-to-menu" onclick="navTo('screen-menu')"><span style="margin-right:15px; font-size:1.5em;">◀</span></div>
         <div class="countdown-header">PROYECTO KRONOS - CONTEO REGRESIVO</div>
         <div class="countdown-band">
-            <div class="time-group"><span class="time-val" id="cd-days">00</span><span class="time-lbl">DIAS</span></div><div class="time-sep">:</div>
             <div class="time-group"><span class="time-val" id="cd-hours">00</span><span class="time-lbl">HORAS</span></div><div class="time-sep">:</div>
             <div class="time-group"><span class="time-val" id="cd-mins">00</span><span class="time-lbl">MINUTOS</span></div><div class="time-sep">:</div>
             <div class="time-group"><span class="time-val" id="cd-secs">00</span><span class="time-lbl">SEGUNDOS</span></div>
         </div>
-        <div class="countdown-footer">lanzamiento</div>
+        <div class="countdown-footer">LANZAMIENTO</div>
     </div>
 
     <div id="screen-omnidroid" class="screen">
         <div class="back-to-menu" onclick="navTo('screen-menu')"><span style="margin-right:15px; font-size:1.5em;">◀</span></div>
         <div class="kronos-display-area">
+            
+            <div id="phases-overlay" class="universal-overlay">
+                <div class="grid-line line-left"></div>
+                <div class="grid-line line-right"></div>
+                <div class="universal-data-col u-col-left">
+                    ESTADO_OP: OK<br>VERIF_SIST: 1<br>44 4 44 43 23<br>10834 45 665<br>335355 5103<br>88 89 427 7<br>0 07 78 88 8<br>BLQ_OBJ: ON<br>LAT: 34.55<br>LON: 58.44<br>ALT: 1000<br>VEL: 500<br>COMB: 98%<br>MOT_1: NOM<br>MOT_2: NOM<br>SIST_NAV: OK<br>ENL_COM: OK<br>CRIPTO: ON<br>PERD_PKT: 0<br>PING: 12ms<br>TRANS_DAT: ALTA<br>NIV_ENERG: 99<br>TEMP: 45C<br>HIDRÁULICA: OK<br>PRESIÓN: 500<br>OXÍGENO: 100%<br>CO2_NIV: 0.1<br>GRAVEDAD: 1G<br>RAD_NIV: 0<br>ESCUDO: 100%<br>ARMA_1: LISTO<br>ARMA_2: LISTO<br>MUNICIÓN_1: 500<br>MUNICIÓN_2: 200<br>BENGALAS: 20<br>CHAFF: 20<br>PILOTO_AUTO: ON<br>PUNTO_RUTA: 4<br>DIST: 50KM<br>ETA: 5MIN
+                </div>
+                <div class="universal-data-col u-col-right">
+                    5987 701 102<br>1 11 155 57 7<br>001 1121 1<br>5 584 499 6<br>PRT_SEG: A1<br>CLAVE_AUT: X<br>99 88 77 66<br>11 22 33 44<br>COLA_CMD:<br>> SEQ_INICIO<br>> CARGAR_IA<br>> VERIF_ARMAS<br>VOLCADO_MEM:<br>00 11 00 11<br>FF AA CC DD<br>12 34 56 78<br>90 AB CD EF<br>REG_ERRORES: 0<br>ADVERTENCIA: NULL<br>TIEMPO_ACT: 99H<br>ESTADO_RED: UP<br>DIR_IP: 10.0<br>MASC: 255.0<br>PUERTA: 10.1<br>DNS: 8.8.8.8<br>MAC: AA:BB:CC<br>PUERTO_80: ABT<br>PUERTO_22: CER<br>CORTAFUEGOS: ON<br>VPN: ACTIVA<br>PROXY: NULL<br>CACHÉ: 50%<br>DISCO_1: 20%<br>DISCO_2: 40%<br>CPU_1: 10%<br>CPU_2: 15%<br>RAM: 60%
+                </div>
+            </div>
+
             <div id="panel-phase-0" class="phase-panel active-panel p0-layout">
+                <div class="universal-overlay">
+                    <div class="grid-line line-left"></div>
+                    <div class="grid-line line-right"></div>
+                    <div class="universal-data-col u-col-left">
+                        88 8 3 4 10 9<br>4 410 0 22 1<br>5 070 305150<br>01 199 5 44 2<br>435 5905 6 1<br>5 0 00 11 2<br>111 4434 41<br>0083 30 0 9<br>39 4 44 11 2<br>49501 11 116<br>4 4300020 0<br>888 33 7 12 4<br>NÚCLEO_SISTEMA<br>AC: 44-12-99<br>BC: 11-00-22<br>X8 99 10 23 4<br>00 11 00 11 0<br>44 55 66 77 8<br>99 00 11 22 3<br>PÁNICO_NÚCLEO<br>0xFF002A1<br>0x00114B2<br>0x9911CC3<br>44 1 4 5 6 7<br>10 20 30 40 5<br>AB CD EF 11 2<br>99 88 77 66 5<br>33 22 11 00 9<br>ASIG_MEM:OK<br>MATRIZ_V: 1<br>COLA_RENDER: 99<br>BÚFER: LLENO<br>00 11 10 01 0<br>44 55 22 11 9<br>88 33 44 22 1<br>0x12345678<br>0x9ABCDEF0<br>0x11223344<br>77 44 11 22 8<br>55 66 99 00 3
+                    </div>
+                    <div class="universal-data-col u-col-right">
+                        030547 11 22<br>5 5040 05301<br>272 230 092<br>00 01 14 49<br>0000 020022<br>790101 10 07<br>0 057 74505<br>REGISTRO_RENDER<br>X: 1024.44<br>Y: 2048.11<br>Z: 0012.00<br>VTX: 4096<br>PLY: 8192<br>TXT: 1024<br>99 11 22 33<br>44 55 66 77<br>88 99 00 11<br>COMPILACIÓN_OK<br>CONSTRUCCIÓN_V10<br>SHA: 256X<br>99 88 77 66<br>11 22 44 55<br>00 00 00 01<br>12 34 56 78<br>90 12 34 56<br>78 90 12 34<br>TASA_SINC: 60<br>BÚFER_CUADRO: 2<br>CARGA_GPU: 98%<br>TEMP: 45C<br>RPM_VENT: 3000<br>V_NÚCLEO: 1.2V<br>11 00 11 00<br>22 33 44 55<br>66 77 88 99<br>AA BB CC DD<br>EE FF 00 11<br>22 33 44 55
+                    </div>
+                </div>
+
                 <div class="p0-header-container"></div>
+                
                 <div class="p0-title-area">
-                    <h1 class="p0-main-title">OMNIDROID</h1>
-                    <div class="p0-sub-container">
-                        <span class="p0-design-text">FINAL DESIGN</span>
-                        <span class="p0-version-text">v.10</span>
+                    <div class="p0-group-left">
+                        <h1 class="p0-main-title">OMNIDROID</h1>
+                        <div class="p0-design-text">DISEÑO FINAL</div>
+                    </div>
+                    <div class="p0-group-right">
+                        <span class="p0-v-text">v.</span><span class="p0-10-text">10</span>
                         <svg class="p0-hex-icon" viewBox="0 0 100 100">
-                            <path d="M20 5 L45 5 L57.5 26.6 L45 48.3 L20 48.3 L7.5 26.6 Z" fill="none" stroke="#152526" stroke-width="3"/>
-                            <path d="M55 5 L80 5 L92.5 26.6 L80 48.3 L55 48.3 L42.5 26.6 Z" fill="none" stroke="#152526" stroke-width="3"/>
-                            <path d="M37.5 35 L62.5 35 L75 56.6 L62.5 78.3 L37.5 78.3 L25 56.6 Z" fill="none" stroke="#152526" stroke-width="3"/>
+                            <path d="M20 5 L45 5 L57.5 26.6 L45 48.3 L20 48.3 L7.5 26.6 Z" fill="none" stroke="currentColor" stroke-width="6"/>
+                            <path d="M55 5 L80 5 L92.5 26.6 L80 48.3 L55 48.3 L42.5 26.6 Z" fill="none" stroke="currentColor" stroke-width="6"/>
+                            <path d="M37.5 35 L62.5 35 L75 56.6 L62.5 78.3 L37.5 78.3 L25 56.6 Z" fill="none" stroke="currentColor" stroke-width="6"/>
                         </svg>
                     </div>
                 </div>
+
                 <div class="p0-schematic-container"><img src="./img/Kronos/omnidroid_cut_upscale.webp" class="p0-schematic-img"></div>
-                <div class="p0-data-left">8 8 3 4<br>4 410 0<br>5 070 30515050536<br>01 199 5<br>435 5905 6<br>5 0<br>111 4434 41 11 1809<br>0083 30 0<br>39 4<br>49501 11 116 5<br>4 4300020 0<br>888 33 7</div>
-                <div class="p0-data-right">030547<br>5 5040 05301<br><br>272 230 092<br>00 01 14 49 90 00301<br><br>0000 020022<br>790101 10 07 73 07 7<br>0 057 74505</div>
             </div>
+
             <div id="panel-phase-1" class="phase-panel p1-exact-layout">
-                <div class="p1-side-columns">
-                    <div class="data-col-left">87 73 33 3<br>5780 0 12 11<br>11 8 99 22<br>01 12 23 31<br>114 44 43 28</div>
-                    <div class="data-col-right">0 025 57307<br>7 75 58 859<br>3 328561 1<br>188 84 419</div>
-                </div>
                 <div class="p1-header-container">
-                    <div class="p1-loading-box"><div class="box-header">LOADING SEQUENCE</div><div class="box-list">1> OMNIDROID DELIVERY MODE<br>2> GANTRY LOADING<br>3> LAUNCH SEQUENCE</div></div>
+                    <div class="phase-header-title">SECUENCIA DE CARGA</div>
                 </div>
-                <div class="p1-title-area"><div class="p1-sub-title">LOADING SEQUENCE</div><div class="p1-main-title">PHASE 1</div></div>
+                
+                <div class="p1-title-area">
+                    <div class="p-title-group">
+                        <div class="p1-main-title">FASE 1</div>
+                    </div>
+                    <div class="p1-loading-box">
+                        <div class="box-header">SECUENCIA DE CARGA</div>
+                        <div class="box-list">1> MODO DE ENTREGA OMNIDROID<br>2> CARGA DE PÓRTICO<br>3> SECUENCIA DE LANZAMIENTO</div>
+                    </div>
+                </div>
                 <div class="p1-stage-area">
                     <div class="connection-bar"><div class="transport-light"></div></div>
                     <div class="bot-container"><div class="p1-label bot-label">OMNIDROID</div><img src="./img/Kronos/fase 1/omnidroid.webp" class="bot-element"></div>
-                    <div class="rocket-container"><div class="p1-label rocket-label-top">OMNIDROID<br>SLIDER</div><img src="./img/Kronos/fase 1/cohete.webp" class="rocket-element"><div class="p1-label rocket-label-bottom">DELIVERY<br>VEHICLE</div></div>
+                    <div class="rocket-container"><div class="p1-label rocket-label-top">DESLIZADOR<br>OMNIDROID</div><img src="./img/Kronos/fase 1/cohete.webp" class="rocket-element"><div class="p1-label rocket-label-bottom">VEHÍCULO<br>DE ENTREGA</div></div>
                     <div class="rocket-sphere-light"></div>
                 </div>
             </div>
+
             <div id="panel-phase-2" class="phase-panel p2-exact-layout">
-                <div class="p2-side-columns">
-                    <div class="p2-data-col-left">44 4 44 43 23 2<br>10834 45 665 34 4<br>335355 5103 57 7<br>88 89 427 7<br>0 07 78 88 87615 5</div>
-                    <div class="p2-data-col-right">5987 701 102 214<br>1 11 155 57 72 275<br>001 1121 1<br>5 584 499 622 36 002 2</div>
-                </div>
                 <div class="p2-header-container">
-                    <div class="p2-info-box"><div class="p2-box-header">STAGE DELIVERY</div><div class="p2-box-list">1> ICSM DEPLOYMENT<br>2> GLIDER SEPARATION<br>3> OMNIDROID ACTIVATION</div></div>
+                    <div class="phase-header-title">ENTREGA DE ETAPA</div>
                 </div>
-                <div class="p2-title-area"><div class="p2-sub-title">STAGE DELIVERY</div><div class="p2-main-title">PHASE 2</div></div>
+                <div class="p2-title-area">
+                    <div class="p-title-group">
+                        <div class="p2-main-title">FASE 2</div>
+                    </div>
+                    <div class="p2-info-box">
+                        <div class="p2-box-header">ENTREGA DE ETAPA</div>
+                        <div class="p2-box-list">1> DESPLIEGUE ICSM<br>2> SEPARACIÓN DEL PLANEADOR<br>3> ACTIVACIÓN DEL OMNIDROID</div>
+                    </div>
+                </div>
                 <div class="p2-stage-area">
-                    <div class="p2-label lbl-launch">LAUNCH POINT</div><div class="p2-label lbl-delivery">DELIVERY VEHICLE</div><div class="p2-label lbl-slider">SLIDER DEPLOYMENT</div><div class="p2-label lbl-landing">LANDING POINT</div>
+                    <div class="p2-label lbl-launch">LANZAMIENTO</div><div class="p2-label lbl-delivery">VEHÍCULO DE ENTREGA</div><div class="p2-label lbl-slider">DESPLIEGUE PLANEADOR</div><div class="p2-label lbl-landing">ATERRIZAJE</div>
                     <div class="p2-trajectory-arc"></div>
                     <div class="p2-world-bg"><img src="./img/Kronos/fase2/isla_ciudad.webp" class="world-img"></div>
                     <div class="p2-rocket-wrapper"><img src="./img/Kronos/fase2/mini-ship.webp" class="p2-rocket-img"></div>
                 </div>
             </div>
+
             <div id="panel-phase-3" class="phase-panel p3-exact-layout">
-                <div class="p3-side-columns">
-                    <div class="p3-data-col-left">88 99 22 11<br>67242 924392 0<br>70031 155 5460 554<br>444115 5<br>5 553 35 37 72 352</div>
-                    <div class="p3-data-col-right">99 2477 78 9919 5<br>0 005 52 2909 55 5<br>2 23 35 52 200 0305 5<br>722447<br>9 9082 27 70122</div>
-                </div>
                 <div class="p3-header-container">
-                    <div class="p3-info-box"><div class="p3-box-header">ACTIVATION</div><div class="p3-box-list">1> SCAN TARGET ZONE<br>2> OFFENSIVE ENGAGEMENT<br>3> REMOTE OVERRIDE</div></div>
+                    <div class="phase-header-title">ACTIVACIÓN</div>
                 </div>
-                <div class="p3-title-area"><div class="p3-sub-title">ACTIVATION</div><div class="p3-main-title">PHASE 3</div></div>
+                <div class="p3-title-area">
+                    <div class="p-title-group">
+                        <div class="p3-main-title">FASE 3</div>
+                    </div>
+                    <div class="p3-info-box">
+                        <div class="p3-box-header">ACTIVACIÓN</div>
+                        <div class="p3-box-list">1> ESCANEAR ZONA OBJETIVO<br>2> COMBATE OFENSIVO<br>3> CONTROL MANUAL REMOTO</div>
+                    </div>
+                </div>
                 <div class="p3-stage-area">
                     <img src="./img/Kronos/fase3/phase-3.webp" class="p3-img-layer p3-intact">
                     <img src="./img/Kronos/fase3/phase-3-destroyed.webp" class="p3-img-layer p3-destroyed">
@@ -186,7 +226,7 @@
             </div> 
         </div> 
         <div class="footer-kronos">
-            <div class="footer-title">OPERATION KRONOS</div>
+            <div class="footer-title">OPERACIÓN KRONOS</div>
             <div class="phase-bar">
                 <span class="phase-label">FASE: </span>
                 <span id="phase-btn-0" class="phase-num selected" onclick="setPhase(0)">DISEÑO</span>
