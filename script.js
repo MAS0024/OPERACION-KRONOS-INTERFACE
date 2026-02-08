@@ -19,10 +19,8 @@ const AudioPlayer = {
 let autoPlayInterval = null; 
 let isAutoPlaying = false;   
 
-// Array vacío inicial, se llenará con el JSON
 let supersList = [];
 
-// Función para cargar los datos desde el archivo JSON
 async function loadSupersData() {
     try {
         const response = await fetch('supers.json');
@@ -35,7 +33,6 @@ async function loadSupersData() {
     }
 }
 
-// Iniciar la carga de datos inmediatamente
 loadSupersData();
 
 let currentSongIdx = 0;
@@ -176,7 +173,6 @@ function startAutoPlay() {
     if(isAutoPlaying) return;
     isAutoPlaying = true;
     autoPlayInterval = setInterval(() => { 
-        // Verificamos que la lista tenga datos
         if (supersList.length > 0) {
             currentSongIdx = (currentSongIdx + 1) % supersList.length; 
             updateSuperDisplay(); 
@@ -192,7 +188,6 @@ function stopAutoPlay() {
 function manualChangeSong(direction) {
     stopAutoPlay(); 
     AudioPlayer.play('blip');
-    // Verificamos que la lista tenga datos
     if (supersList.length > 0) {
         if(direction === 'next') { 
             currentSongIdx = (currentSongIdx + 1) % supersList.length; 
@@ -204,7 +199,6 @@ function manualChangeSong(direction) {
 }
 
 function updateSuperDisplay() { 
-    // Si la lista aún no ha cargado, salimos para evitar errores
     if (supersList.length === 0) return;
 
     const s = supersList[currentSongIdx]; 
