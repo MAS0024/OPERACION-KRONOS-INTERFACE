@@ -19,128 +19,25 @@ const AudioPlayer = {
 let autoPlayInterval = null; 
 let isAutoPlaying = false;   
 
-const supersList = [
-    { 
-        name: "UNIVERSAL MAN", 
-        powers: "Poderes: manipulación de la densidad atómica", 
-        img: "./img/SUPERS/1UNIVERSALMAN.png", 
-        status: "TERMINADO",
-        threat: "5.8", 
-        
-        model: "OMNIDROID v.X1", 
-        features: "CARACTERÍSTICAS: Locomoción con ruedas, exhibición bisensorial, garras de agarre biarticulares",
-        modelImg: "./img/PROTOTIPOS/X1.png", 
-        modelStatus: "ACTIVO"
-    },
-     { 
-        name: "PSYCWAVE", 
-        powers: "Poderes: previsión psíquica, control del pensamiento, telequinesis", 
-        img: "./img/SUPERS/2PSYCWAVE.png", 
-        status: "TERMINADO",
-        threat: "5.8", 
-        
-        model: "OMNIDROID v.X1", 
-        features: "CARACTERÍSTICAS: Locomoción con ruedas, exhibición bisensorial, garras de agarre biarticulares",
-        modelImg: "./img/PROTOTIPOS/X1.png", 
-        modelStatus: "ACTIVO"
-    },
-    { 
-        name: "EVERSEER", 
-        powers: "PODERES: telepatía, clarividencia, magnivisión", 
-        img: "./img/SUPERS/3EVERSEER.png", 
-        status: "TERMINADO",
-        threat: "6.3",
-        
-        model: "OMNIDROID v.X1", 
-        features: "CARACTERÍSTICAS: Locomoción con ruedas, exhibición bisensorial, garras de agarre biarticulares",
-        modelImg: "./img/PROTOTIPOS/X1.png", 
-        modelStatus: "ACTIVO"
-    },
-    { 
-        name: "MACRO BURST", 
-        powers: "PODERES: proyección de fuerza de alta densidad", 
-        img: "./img/SUPERS/4MACROBURST.png", 
-        status: "ACTIVO",
-        threat: "6.3",
-        
-        model: "OMNIDROID v.X1", 
-        features: "CARACTERÍSTICAS: Locomoción con ruedas, exhibición bisensorial, garras de agarre biarticulares",
-        modelImg: "./img/PROTOTIPOS/X1.png", 
-        modelStatus: "TERMINADO"
-    },
-        { 
-        name: "MACRO BURST", 
-        powers: "PODERES: proyección de fuerza de alta densidad", 
-        img: "./img/SUPERS/4MACROBURST.png", 
-        status: "TERMINADO",
-        threat: "6.3",
-        
-        model: "OMNIDROID v.X2", 
-        features: "CARACTERÍSTICAS: Locomoción bípeda, conjunto sensorial unidireccional, garras de agarre biarticuladas",
-        modelImg: "./img/PROTOTIPOS/X2.png", 
-        modelStatus: "ACTIVO"
-    },
-    { 
-        name: "PHYLANGE", 
-        powers: "PODERES: proyección de campo sonoro", 
-        img: "./img/SUPERS/5PHYLANGE.png", 
-        status: "TERMINADO",
-        threat: "6.3",
-        
-        model: "OMNIDROID v.X2", 
-        features: "CARACTERÍSTICAS: Locomoción bípeda, conjunto sensorial unidireccional, garras de agarre biarticuladas",
-        modelImg: "./img/PROTOTIPOS/X2.png", 
-        modelStatus: "ACTIVO"
-    },
-   { 
-        name: "BLAZE STONE", 
-        powers: "PODERES: descarga pirotécnica, control de incendios", 
-        img: "./img/SUPERS/6BLAZESTONE.png", 
-        status: "TERMINADO",
-        threat: "6.3",
-        
-        model: "OMNIDROID v.X2", 
-        features: "CARACTERÍSTICAS: Locomoción bípeda, conjunto sensorial unidireccional, garras de agarre biarticuladas",
-        modelImg: "./img/PROTOTIPOS/X2.png", 
-        modelStatus: "ACTIVO"
-    },
-    { 
-        name: "DYNAGUY", 
-        powers: "PODERES: Vuelo, rayo de desintegración", 
-        img: "./img/SUPERS/7DYNAGUY.png", 
-        status: "ACTIVO",
-        threat: "6.3",
-        
-        model: "OMNIDROID v.X2", 
-        features: "CARACTERÍSTICAS: Locomoción bípeda, conjunto sensorial unidireccional, garras de agarre biarticuladas",
-        modelImg: "./img/PROTOTIPOS/X2.png", 
-        modelStatus: "TERMINADO"
-    },
-    { 
-        name: "DYNAGUY", 
-        powers: "PODERES: Vuelo, rayo de desintegración", 
-        img: "./img/SUPERS/7DYNAGUY.png", 
-        status: "TERMINADO",
-        threat: "6.3",
-        
-        model: "OMNIDROID v.X3", 
-        features: "CARACTERÍSTICAS: Locomoción trípeda suspendida/garras de agarre, conjunto sensorial unidireccional",
-        modelImg: "./img/PROTOTIPOS/X3.png", 
-        modelStatus: "ACTIVO"
-    },
-    { 
-        name: "DOWNBURST", 
-        powers: "PODERES: Vuelo, expulsión gaseosa", 
-        img: "./img/SUPERS/8DOWNBURST.png", 
-        status: "TERMINADO",
-        threat: "6.3",
-        
-        model: "OMNIDROID v.X3", 
-        features: "CARACTERÍSTICAS: Locomoción trípeda suspendida/garras de agarre, conjunto sensorial unidireccional",
-        modelImg: "./img/PROTOTIPOS/X3.png", 
-        modelStatus: "ACTIVO"
-    },
-];
+// Array vacío inicial, se llenará con el JSON
+let supersList = [];
+
+// Función para cargar los datos desde el archivo JSON
+async function loadSupersData() {
+    try {
+        const response = await fetch('supers.json');
+        if (!response.ok) {
+            throw new Error('Error al cargar el archivo JSON');
+        }
+        supersList = await response.json();
+    } catch (error) {
+        console.error("Error cargando supers:", error);
+    }
+}
+
+// Iniciar la carga de datos inmediatamente
+loadSupersData();
+
 let currentSongIdx = 0;
 
 let currentPhase = 0; 
@@ -279,8 +176,11 @@ function startAutoPlay() {
     if(isAutoPlaying) return;
     isAutoPlaying = true;
     autoPlayInterval = setInterval(() => { 
-        currentSongIdx = (currentSongIdx + 1) % supersList.length; 
-        updateSuperDisplay(); 
+        // Verificamos que la lista tenga datos
+        if (supersList.length > 0) {
+            currentSongIdx = (currentSongIdx + 1) % supersList.length; 
+            updateSuperDisplay(); 
+        }
     }, 1500); 
 }
 
@@ -292,15 +192,21 @@ function stopAutoPlay() {
 function manualChangeSong(direction) {
     stopAutoPlay(); 
     AudioPlayer.play('blip');
-    if(direction === 'next') { 
-        currentSongIdx = (currentSongIdx + 1) % supersList.length; 
-    } else { 
-        currentSongIdx = (currentSongIdx - 1 + supersList.length) % supersList.length; 
+    // Verificamos que la lista tenga datos
+    if (supersList.length > 0) {
+        if(direction === 'next') { 
+            currentSongIdx = (currentSongIdx + 1) % supersList.length; 
+        } else { 
+            currentSongIdx = (currentSongIdx - 1 + supersList.length) % supersList.length; 
+        }
+        updateSuperDisplay();
     }
-    updateSuperDisplay();
 }
 
 function updateSuperDisplay() { 
+    // Si la lista aún no ha cargado, salimos para evitar errores
+    if (supersList.length === 0) return;
+
     const s = supersList[currentSongIdx]; 
     
     document.getElementById('super-name').innerText = s.name; 
