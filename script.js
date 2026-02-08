@@ -21,41 +21,125 @@ let isAutoPlaying = false;
 
 const supersList = [
     { 
-        name: "TRADEWIND", 
-        powers: "PODERES: CONTROL ELEMENTAL DE VIENTO Y TORMENTAS", 
-        img: "./img/SUPERS/1-dynaguy.png", 
+        name: "UNIVERSAL MAN", 
+        powers: "Poderes: Vuelo, rayo desintegrador.", 
+        img: "./img/SUPERS/1UNIVERSALMAN.png", 
         status: "TERMINADO",
         threat: "5.8", 
         
-        model: "OMNIDROID v.X4", 
-        features: "CARACTERÍSTICAS: LOCOMOCIÓN CUADRÚPEDA, GARRAS DE AGARRE, MATRIZ SENSORIAL.",
-        modelImg: "./img/PROTOTIPOS/1.png", 
+        model: "OMNIDROID v.X1", 
+        features: "CARACTERÍSTICAS: Locomoción suspendida con tres pedales, garras de agarre, conjunto sensorial unidireccional",
+        modelImg: "./img/PROTOTIPOS/X1.png", 
+        modelStatus: "ACTIVO"
+    },
+     { 
+        name: "PSYCWAVE", 
+        powers: "Poderes: Vuelo, rayo desintegrador.", 
+        img: "./img/SUPERS/2PSYCWAVE.png", 
+        status: "TERMINADO",
+        threat: "5.8", 
+        
+        model: "OMNIDROID v.X1", 
+        features: "CARACTERÍSTICAS: Locomoción suspendida con tres pedales, garras de agarre, conjunto sensorial unidireccional",
+        modelImg: "./img/PROTOTIPOS/X1.png", 
         modelStatus: "ACTIVO"
     },
     { 
-        name: "GAZERBEAM", 
+        name: "EVERSEER", 
         powers: "PODERES: GENERACIÓN DE RÁFAGAS DE CALOR DESDE LOS OJOS", 
-        img: "./img/SUPERS/2-downburst.png", 
+        img: "./img/SUPERS/3EVERSEER.png", 
+        status: "TERMINADO",
+        threat: "6.3",
+        
+        model: "OMNIDROID v.X1", 
+        features: "CARACTERÍSTICAS: Locomoción suspendida con tres pedales, garras de agarre, conjunto sensorial unidireccional",
+        modelImg: "./img/PROTOTIPOS/X1.png", 
+        modelStatus: "ACTIVO"
+    },
+    { 
+        name: "MACRO BURST", 
+        powers: "PODERES: GENERACIÓN DE RÁFAGAS DE CALOR DESDE LOS OJOS", 
+        img: "./img/SUPERS/4MACROBURST.png", 
         status: "ACTIVO",
         threat: "6.3",
         
-        model: "OMNIDROID v.X5", 
-        features: "CARACTERÍSTICAS: SENSORES OMNIDIRECCIONALES, IA MEJORADA, ESCUDOS TÉRMICOS.",
-        modelImg: "./img/PROTOTIPOS/1.png",
+        model: "OMNIDROID v.X1", 
+        features: "CARACTERÍSTICAS: Locomoción suspendida con tres pedales, garras de agarre, conjunto sensorial unidireccional",
+        modelImg: "./img/PROTOTIPOS/X1.png", 
+        modelStatus: "TERMINADO"
+    },
+        { 
+        name: "MACRO BURST", 
+        powers: "PODERES: GENERACIÓN DE RÁFAGAS DE CALOR DESDE LOS OJOS", 
+        img: "./img/SUPERS/4MACROBURST.png", 
+        status: "TERMINADO",
+        threat: "6.3",
+        
+        model: "OMNIDROID v.X2", 
+        features: "CARACTERÍSTICAS: Locomoción suspendida con tres pedales, garras de agarre, conjunto sensorial unidireccional",
+        modelImg: "./img/PROTOTIPOS/X2.png", 
+        modelStatus: "ACTIVO"
+    },
+    { 
+        name: "PHYLANGE", 
+        powers: "PODERES: GENERACIÓN DE RÁFAGAS DE CALOR DESDE LOS OJOS", 
+        img: "./img/SUPERS/5PHYLANGE.png", 
+        status: "TERMINADO",
+        threat: "6.3",
+        
+        model: "OMNIDROID v.X2", 
+        features: "CARACTERÍSTICAS: Locomoción suspendida con tres pedales, garras de agarre, conjunto sensorial unidireccional",
+        modelImg: "./img/PROTOTIPOS/X2.png", 
+        modelStatus: "ACTIVO"
+    },
+   { 
+        name: "BLAZE STONE", 
+        powers: "PODERES: GENERACIÓN DE RÁFAGAS DE CALOR DESDE LOS OJOS", 
+        img: "./img/SUPERS/6BLAZESTONE.png", 
+        status: "TERMINADO",
+        threat: "6.3",
+        
+        model: "OMNIDROID v.X2", 
+        features: "CARACTERÍSTICAS: Locomoción suspendida con tres pedales, garras de agarre, conjunto sensorial unidireccional",
+        modelImg: "./img/PROTOTIPOS/X2.png", 
+        modelStatus: "ACTIVO"
+    },
+    { 
+        name: "DYNAGUY", 
+        powers: "PODERES: GENERACIÓN DE RÁFAGAS DE CALOR DESDE LOS OJOS", 
+        img: "./img/SUPERS/7DYNAGUY.png", 
+        status: "ACTIVO",
+        threat: "6.3",
+        
+        model: "OMNIDROID v.X2", 
+        features: "CARACTERÍSTICAS: Locomoción suspendida con tres pedales, garras de agarre, conjunto sensorial unidireccional",
+        modelImg: "./img/PROTOTIPOS/X2.png", 
         modelStatus: "TERMINADO"
     },
     { 
-        name: "MR. INCREDIBLE", 
-        powers: "PODERES: FUERZA Y DURABILIDAD MEJORADAS", 
-        img: "./img/SUPERS/2 -downburst.png", 
-        status: "TERMINADO", 
-        threat: "9.1",
+        name: "DYNAGUY", 
+        powers: "PODERES: GENERACIÓN DE RÁFAGAS DE CALOR DESDE LOS OJOS", 
+        img: "./img/SUPERS/7DYNAGUY.png", 
+        status: "TERMINADO",
+        threat: "6.3",
         
-        model: "OMNIDROID v.10", 
-        features: "CARACTERÍSTICAS: LOCOMOCIÓN DE SEIS PATAS, APRENDIZAJE IA, CASCO INDESTRUCTIBLE.",
-        modelImg: "./img/PROTOTIPOS/2.png",
-        modelStatus: "LISTO"
-    }
+        model: "OMNIDROID v.X3", 
+        features: "CARACTERÍSTICAS: Locomoción suspendida con tres pedales, garras de agarre, conjunto sensorial unidireccional",
+        modelImg: "./img/PROTOTIPOS/X3.png", 
+        modelStatus: "ACTIVO"
+    },
+    { 
+        name: "DOWNBURST", 
+        powers: "PODERES: GENERACIÓN DE RÁFAGAS DE CALOR DESDE LOS OJOS", 
+        img: "./img/SUPERS/8DOWNBURST.png", 
+        status: "TERMINADO",
+        threat: "6.3",
+        
+        model: "OMNIDROID v.X3", 
+        features: "CARACTERÍSTICAS: Locomoción suspendida con tres pedales, garras de agarre, conjunto sensorial unidireccional",
+        modelImg: "./img/PROTOTIPOS/X3.png", 
+        modelStatus: "ACTIVO"
+    },
 ];
 let currentSongIdx = 0;
 
