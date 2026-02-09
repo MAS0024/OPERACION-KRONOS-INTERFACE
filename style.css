@@ -18,21 +18,18 @@ body, html {
 .screen {
     position: absolute; top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    
-    /* Mantenemos el aspect ratio 16:9 basado en la ventana */
     aspect-ratio: 16 / 9;
     width: 100vw; height: 56.25vw;
     max-height: 100vh; max-width: 177.78vh;
-    
-    /* ACTIVAMOS LAS CONSULTAS DE CONTENEDOR */
-    container-type: size;
-    
     display: none !important; 
     flex-direction: column; justify-content: space-between; z-index: 10;
     background-color: #4e7072;
     background-image: 
         radial-gradient(circle at center, rgba(90, 130, 133, 0.4) 0%, rgba(0, 0, 0, 0.6) 90%);
     box-shadow: 0 0 50px rgba(0,0,0,0.5); border: 1px solid #000000;
+    
+    /* ACTIVAMOS LAS CONSULTAS DE CONTENEDOR */
+    container-type: size;
 }
 .screen.active { display: flex !important; }
 
@@ -49,8 +46,6 @@ body, html {
     background: radial-gradient(circle at center, rgba(90, 130, 133, 0.4) 0%, rgba(30, 50, 50, 0.6) 90%);
     z-index: 1; pointer-events: none;
 }
-
-/* NOTA: A partir de aquí, usamos cqh (Container Query Height) en lugar de vh */
 
 .menu-horizontal-strip {
     position: absolute;
@@ -151,10 +146,10 @@ body, html {
 .back-to-menu {
     position: absolute; top: 0; left: 0; height: 8%; 
     display: flex; align-items: center; padding-left: 2%; padding-right: 1%;
-    background: var(--dark-ui); color: #8fadad; font-size: 1.5cqh; font-weight: bold;
-    cursor: pointer; z-index: 100; border-right: 2px solid #5a8a8b; transition: background 0.2s;
+    background: var(--dark-ui); font-size: 1.5cqh; font-weight: bold;
+    cursor: pointer; z-index: 100;  transition: background 0.2s;
 }
-.back-to-menu:hover { background: #2f4f52; color: #fff; }
+.back-to-menu:hover { background: rgb(31, 39, 41); color: #fff; }
 
 #screen-password { justify-content: center; align-items: center; }
 .horizontal-strip { width: 100%; background-color: rgb(255 255 255 / 38%); border-top: 1px solid rgba(255,255,255,0.2); border-bottom: 1px solid rgba(255,255,255,0.2); padding: 6cqh 0; display: flex; justify-content: center; align-items: center; }
@@ -350,10 +345,9 @@ body, html {
 }
 
 .p0-design-text {
-    font-size: 1.6cqh;
+    font-size: 2cqh;
     font-weight: 900;      
-    letter-spacing: 2.5cqh; 
-    
+    letter-spacing: 3.7cqh; 
     margin-left: 0.5cqh;
     margin-top: 0.5cqh; 
     color: #152526;
@@ -367,7 +361,7 @@ body, html {
 .p0-group-right {
     display: flex;
     align-items: center; 
-    margin-top: 0.5cqh; 
+    margin-top: 1.5cqh; 
     gap: 0; 
 }
 
@@ -440,7 +434,7 @@ body, html {
     background-color: rgba(255, 255, 255, 0.15); 
     z-index: 1; 
     animation: growConnectionBar 0.5s ease-out forwards;
-    animation-delay: 0.5s;
+
 }
 
 @keyframes growConnectionBar {
@@ -464,12 +458,12 @@ body, html {
 }
 
 .bot-label { top: -4cqh; width: 100%; text-align: center; }
-.bot-element { width: 100%; height: auto; filter: opacity(0.85); }
+.bot-element { width: 110%; height: auto; filter: opacity(1); }
 .rocket-container { position: absolute; z-index: 5; top: 25%; right: 28%; width: 25%; height: auto; }
-.rocket-element { width: 85%; height: auto; display: block; }
+.rocket-element { width: 85%; height: auto; display: block;  }
 .rocket-label-top { position: absolute; top: 5%; right: -85%; text-align: left; width: 100%; }
 .rocket-label-bottom { position: absolute; top: 70%; bottom: 20%; right: -85%; text-align: left; width: 100%; }
-.rocket-sphere-light { position: absolute; z-index: 100; top: 55%; right: 38%; width: 5%; aspect-ratio: 1/1; height: 14%; border-radius: 50%; background-color: rgb(255, 255, 255); box-shadow: 0 0 25px rgba(255, 255, 255, 1); animation: pulseSphere 0.35s infinite alternate; }
+.rocket-sphere-light { position: absolute; z-index: 100; top: 55%; right: 38%; width: 5%; aspect-ratio: 1/1; height: 14%; border-radius: 50%; background-color: rgb(255, 255, 255); box-shadow: 0 0 25px rgba(255, 255, 255, 1); animation: pulseSphere 0.2s infinite alternate; }
 @keyframes pulseSphere { 0% { opacity: 0.2; transform: translate(-50%, -50%) scale(1); } 100% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); background-color: rgba(255, 255, 255, 0.6); } }
 
 .p2-exact-layout { width: 100%; height: 100%; background-color: #6a8587; position: relative; overflow: hidden; font-family: 'Orbitron', sans-serif; }
@@ -480,22 +474,63 @@ body, html {
 .lbl-slider { right: 20%; top: 30%; }
 .lbl-landing { right: 16%; top: 68%; }
 .p2-world-bg { position: absolute; bottom: -5%; left: 10%; right: 10%; height: 40%; z-index: 2; display: flex; align-items: flex-end; justify-content: center; }
-.world-img { width: 80%; height: auto; filter: brightness(0.25) opacity(0.9); object-fit: contain; }
+.world-img { width: 80%; height: auto; z-index: 1000;}
 .p2-trajectory-arc { position: absolute; left: 24%; width: 43%; bottom: -12%; height: 77%; border: 8cqh solid rgba(255, 255, 255, 0.2); border-radius: 50% 50% 0 0 / 75% 75% 0 0; border-bottom: none; z-index: 1; }
 .p2-rocket-wrapper { position: absolute; width: 3.5%; height: auto; z-index: 10; opacity: 0; }
 .p2-rocket-img { width: 100%; height: auto; filter: brightness(0.0); transform: rotate(0deg); }
-.phase-panel.active-panel .p2-rocket-wrapper { animation: arcFlight 2s linear infinite; }
+.phase-panel.active-panel .p2-rocket-wrapper { animation: arcFlight 1.5s linear infinite; }
+
 @keyframes arcFlight {
     0% { left: 25.5%; top: 82%; transform: rotate(0deg); opacity: 0; }
+    2% { left: 25.55%; top: 77%; transform: rotate(4deg); opacity: 0.5; }
     4% { left: 25.6%; top: 72%; transform: rotate(8deg); opacity: 1; }
-    15% { left: 27.5%; top: 50%; transform: rotate(35deg); }
-    30% { left: 33.5%; top: 32%; transform: rotate(62deg); }
-    50% { left: 48.2%; top: 21%; transform: rotate(90deg); } 
-    74% { left: 65.5%; top: 38%; transform: rotate(130deg); }
-    90% { left: 70.5%; top: 62%; transform: rotate(160deg); opacity: 1; }
-    100% { left: 71.5%; top: 82%; transform: rotate(180deg); opacity: 0; }
+    6% { left: 25.9%; top: 68.3%; transform: rotate(12deg); }
+    8% { left: 26.3%; top: 64.6%; transform: rotate(18deg); }
+    10% { left: 26.7%; top: 61%; transform: rotate(22deg); }
+    12% { left: 27.2%; top: 55.5%; transform: rotate(28deg); }
+    14% { left: 27.6%; top: 52.2%; transform: rotate(32deg); }  
+    15% { left: 27.9%; top: 50%; transform: rotate(35deg); }
+    18% { left: 29.1%; top: 46%; transform: rotate(41deg); }
+    20% { left: 30.0%; top: 43.5%; transform: rotate(44deg); } 
+    22% { left: 31.0%; top: 41%; transform: rotate(48deg); }
+    24% { left: 31.8%; top: 38.5%; transform: rotate(51deg); }
+    26% { left: 32.6%; top: 36.2%; transform: rotate(55deg); }
+    28% { left: 33.3%; top: 34.0%; transform: rotate(58deg); }  
+    30% { left: 34.1%; top: 32%; transform: rotate(62deg); }
+    32% { left: 35.6%; top: 30.0%; transform: rotate(65deg); }
+    35% { left: 37.8%; top: 27.8%; transform: rotate(69deg); }
+    38% { left: 40.0%; top: 25.8%; transform: rotate(73deg); }
+    40% { left: 41.5%; top: 24.2%; transform: rotate(76deg); }
+    42% { left: 43.0%; top: 23.2%; transform: rotate(79deg); }
+    45% { left: 45.1%; top: 21.7%; transform: rotate(83deg); }
+    48% { left: 47.3%; top: 20.5%; transform: rotate(87deg); }
+    50% { left: 48.7%; top: 19.5%; transform: rotate(90deg); }
+    52% { left: 50.1%; top: 19.8%; transform: rotate(93deg); }
+    54% { left: 51.5%; top: 20.4%; transform: rotate(96deg); }
+    56% { left: 52.8%; top: 21.3%; transform: rotate(99deg); }
+    58% { left: 54.1%; top: 22.5%; transform: rotate(103deg); }
+    60% { left: 55.5%; top: 24.2%; transform: rotate(106deg); }
+    62% { left: 56.9%; top: 25.7%; transform: rotate(109deg); }
+    64% { left: 58.3%; top: 27.5%; transform: rotate(113deg); }
+    66% { left: 59.7%; top: 29.7%; transform: rotate(116deg); }
+    68% { left: 61.0%; top: 32.2%; transform: rotate(119deg); }
+    70% { left: 62.2%; top: 34.2%; transform: rotate(123deg); }
+    72% { left: 63.5%; top: 36.5%; transform: rotate(126deg); }
+    74% { left: 64.9%; top: 39.2%; transform: rotate(130deg); }
+    76% { left: 66.3%; top: 42.1%; transform: rotate(134deg); }
+    78% { left: 67.5%; top: 45.2%; transform: rotate(138deg); }
+    80% { left: 68.6%; top: 48.5%; transform: rotate(142deg); } 
+    82% { left: 69.6%; top: 52.0%; transform: rotate(146deg); } 
+    84% { left: 70.4%; top: 55.6%; transform: rotate(150deg); }
+    86% { left: 71.0%; top: 59.3%; transform: rotate(154deg); }
+    88% { left: 71.4%; top: 63.1%; transform: rotate(158deg); }
+    90% { left: 71.6%; top: 67.0%; transform: rotate(162deg); opacity: 1; }
+    92% { left: 71.7%; top: 70.5%; transform: rotate(166deg); opacity: 1; }
+    94% { left: 71.7%; top: 73.8%; transform: rotate(170deg); opacity: 0.8; }
+    96% { left: 71.7%; top: 77.0%; transform: rotate(173deg); opacity: 0.4; }
+    98% { left: 71.7%; top: 80.0%; transform: rotate(177deg); opacity: 0.1; }
+    100% { left: 71.7%; top: 82.0%; transform: rotate(180deg); opacity: 0; }
 }
-
 .p3-exact-layout { width: 100%; height: 100%; background-color: #6a8587; position: relative; overflow: hidden; font-family: 'Orbitron', sans-serif; }
 .p3-stage-area { position: absolute; top: 20%; left: 0; width: 100%; height: 80%; z-index: 5; display: flex; justify-content: center; align-items: center; }
 .p3-img-layer { position: absolute; width: 50%; height: auto; object-fit: contain; }
