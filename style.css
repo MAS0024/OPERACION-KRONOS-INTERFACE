@@ -219,7 +219,7 @@ body, html {
 .terminated-bar { position: absolute; top: 50%; left: 0; width: 100%; height: 9cqh; background-color: #8a0b0b; display: none; align-items: center; justify-content: center; transform: translateY(-50%); z-index: 5; opacity: 0; }
 .terminated-bar.active-alert { display: flex; animation: simpleFadeIn 0.2s linear 0.5s forwards; }
 @keyframes simpleFadeIn { from { opacity: 0; } to { opacity: 1; } }
-.terminated-text { font-size: 5cqh; font-weight: 900; letter-spacing: 1cqh; color: #e0e0e0; text-shadow: none; }
+.terminated-text { font-size: 8.5cqh; font-weight: 1000; letter-spacing: 3cqh; color: #e0e0e0; text-shadow: none; }
 
 .nav-arrow { position: absolute; top: 50%; transform: translateY(-50%); font-size: 6cqh; color: rgba(21, 37, 38, 0.5); cursor: pointer; z-index: 20; padding: 2cqh; transition: all 0.2s ease; user-select: none; background: transparent; }
 .nav-arrow:hover { color: #152526; transform: translateY(-50%) scale(1.2); filter: drop-shadow(0 0 10px rgba(255,255,255,0.5)); }
