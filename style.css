@@ -553,6 +553,20 @@ body, html {
 .phase-panel.active-panel .p3-impact-flash { animation: impactBoom 2.5s infinite; }
 @keyframes impactBoom { 0% { width: 0; height: 0; opacity: 0; } 35% { width: 0; height: 0; opacity: 0; } 35.1% { width: 15vw; height: 15vw; opacity: 1; } 45% { width: 20vw; height: 20vw; opacity: 0; } 100% { width: 0; height: 0; opacity: 0; } }
 
+.watermark-credits {
+    position: fixed;
+    bottom: 12px;
+    right: 15px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.25);
+    letter-spacing: 1.2px;
+    z-index: 9999; 
+    pointer-events: none; 
+    text-transform: uppercase;
+    user-select: none; 
+}
+
 @media (max-width: 480px) {
     .menu-wrapper { width: 95%; }
     .menu-guide-line { left: 20%; }
