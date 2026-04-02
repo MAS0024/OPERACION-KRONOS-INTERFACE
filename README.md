@@ -1,5 +1,10 @@
 # LINK: https://operacionkronos.netlify.app/
 ---
+### Tecnologías utilizadas
+* HTML5, CSS3 y JavaScript
+* Fuentes de Google (Orbitron)
+* Sonidos de Half Life 1
+---
 
 Comparacion:
 
