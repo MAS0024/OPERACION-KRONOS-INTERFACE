@@ -1,5 +1,5 @@
-https://operacionkronos.netlify.app/
-
+# LINK DIRECTO DEL PROYECTO: https://operacionkronos.netlify.app/
+| :---: | :---: |
 Comparacion:
 
 <table>
