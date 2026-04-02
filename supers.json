@@ -2,7 +2,7 @@
     {
         "name": "UNIVERSAL MAN",
         "powers": "Poderes: manipulación de la densidad atómica",
-        "img": "./img/SUPERS/1UNIVERSALMAN.png",
+        "img": "./img/SUPERS/1UNIVERSALMAN.jpg",
         "status": "TERMINADO",
         "threat": "2.9",
         "model": "OMNIDROID v.X1",
@@ -13,7 +13,7 @@
     {
         "name": "PSYCWAVE",
         "powers": "Poderes: previsión psíquica, control del pensamiento, telequinesis",
-        "img": "./img/SUPERS/2PSYCWAVE.png",
+        "img": "./img/SUPERS/2PSYCWAVE.jpg",
         "status": "TERMINADO",
         "threat": "1.6",
         "model": "OMNIDROID v.X1",
@@ -24,7 +24,7 @@
     {
         "name": "EVERSEER",
         "powers": "PODERES: telepatía, clarividencia, magnivisión",
-        "img": "./img/SUPERS/3EVERSEER.png",
+        "img": "./img/SUPERS/3EVERSEER.jpg",
         "status": "TERMINADO",
         "threat": "3.2",
         "model": "OMNIDROID v.X1",
@@ -35,7 +35,7 @@
     {
         "name": "MACRO BURST",
         "powers": "PODERES: proyección de fuerza de alta densidad",
-        "img": "./img/SUPERS/4MACROBURST.png",
+        "img": "./img/SUPERS/4MACROBURST.jpg",
         "status": "ACTIVO",
         "threat": "5.9",
         "model": "OMNIDROID v.X1",
@@ -46,7 +46,7 @@
     {
         "name": "MACRO BURST",
         "powers": "PODERES: proyección de fuerza de alta densidad",
-        "img": "./img/SUPERS/4MACROBURST.png",
+        "img": "./img/SUPERS/4MACROBURST.jpg",
         "status": "TERMINADO",
         "threat": "5.9",
         "model": "OMNIDROID v.X2",
@@ -57,7 +57,7 @@
     {
         "name": "PHYLANGE",
         "powers": "PODERES: proyección de campo sonoro",
-        "img": "./img/SUPERS/5PHYLANGE.png",
+        "img": "./img/SUPERS/5PHYLANGE.jpg",
         "status": "TERMINADO",
         "threat": "4.7",
         "model": "OMNIDROID v.X2",
@@ -68,7 +68,7 @@
     {
         "name": "BLAZE STONE",
         "powers": "PODERES: descarga pirotécnica, control de incendios",
-        "img": "./img/SUPERS/6BLAZESTONE.png",
+        "img": "./img/SUPERS/6BLAZESTONE.jpg",
         "status": "TERMINADO",
         "threat": "5.5",
         "model": "OMNIDROID v.X2",
@@ -79,7 +79,7 @@
     {
         "name": "DYNAGUY",
         "powers": "PODERES: Vuelo, rayo de desintegración",
-        "img": "./img/SUPERS/7DYNAGUY.png",
+        "img": "./img/SUPERS/7DYNAGUY.jpg",
         "status": "ACTIVO",
         "threat": "6.2",
         "model": "OMNIDROID v.X2",
@@ -90,7 +90,7 @@
     {
         "name": "DYNAGUY",
         "powers": "PODERES: Vuelo, rayo de desintegración",
-        "img": "./img/SUPERS/7DYNAGUY.png",
+        "img": "./img/SUPERS/7DYNAGUY.jpg",
         "status": "TERMINADO",
         "threat": "6.2",
         "model": "OMNIDROID v.X3",
@@ -101,7 +101,7 @@
     {
         "name": "DOWNBURST",
         "powers": "PODERES: Vuelo, expulsión gaseosa",
-        "img": "./img/SUPERS/8DOWNBURST.png",
+        "img": "./img/SUPERS/8DOWNBURST.jpg",
         "status": "TERMINADO",
         "threat": "6.5",
         "model": "OMNIDROID v.X3",
@@ -112,7 +112,7 @@
     {
         "name": "HYPER SHOCK",
         "powers": "PODERES: Generación de ondas sísmicas",
-        "img": "./img/SUPERS/9HYPERSHOCK.png",
+        "img": "./img/SUPERS/9HYPERSHOCK.jpg",
         "status": "ACTIVO",
         "threat": "7.5",
         "model": "OMNIDROID v.X3",
@@ -123,7 +123,7 @@
     {
         "name": "HYPER SHOCK",
         "powers": "PODERES: Generación de ondas sísmicas",
-        "img": "./img/SUPERS/9HYPERSHOCK.png",
+        "img": "./img/SUPERS/9HYPERSHOCK.jpg",
         "status": "TERMINADO",
         "threat": "7.5",
         "model": "OMNIDROID v.X4",
@@ -134,7 +134,7 @@
     {
         "name": "APOGEE",
         "powers": "PODERES: Control de gravedad, levitación",
-        "img": "./img/SUPERS/10APOGEE.png",
+        "img": "./img/SUPERS/10APOGEE.jpg",
         "status": "TERMINADO",
         "threat": "6.5",
         "model": "OMNIDROID v.X4",
@@ -145,7 +145,7 @@
     {
         "name": "BLITZERMAN",
         "powers": "PODERES: Locomoción de alta potencia",
-        "img": "./img/SUPERS/11BLITZERMAN.png",
+        "img": "./img/SUPERS/11BLITZERMAN.jpg",
         "status": "TERMINADO",
         "threat": "6.6",
         "model": "OMNIDROID v.X4",
@@ -156,7 +156,7 @@
     {
         "name": "TRADEWIND",
         "powers": "PODERES: Control elemental del viento y las tormentas",
-        "img": "./img/SUPERS/12TRADEWIND.png",
+        "img": "./img/SUPERS/12TRADEWIND.jpg",
         "status": "TERMINADO",
         "threat": "5.8",
         "model": "OMNIDROID v.X4",
@@ -167,7 +167,7 @@
     {
         "name": "VECTRESS",
         "powers": "PODERES: Ráfagas subsónicas, vuelo",
-        "img": "./img/SUPERS/13VECTRESS.png",
+        "img": "./img/SUPERS/13VECTRESS.jpg",
         "status": "TERMINADO",
         "threat": "6.1",
         "model": "OMNIDROID v.X4",
@@ -178,7 +178,7 @@
     {
         "name": "GAZERBEAM",
         "powers": "PODERES: Vision Lazer",
-        "img": "./img/SUPERS/14GAZERBEAM.png",
+        "img": "./img/SUPERS/14GAZERBEAM.jpg",
         "status": "ACTIVO",
         "threat": "6.3",
         "model": "OMNIDROID v.X4",
@@ -189,7 +189,7 @@
     {
         "name": "GAZERBEAM",
         "powers": "PODERES: Vision Lazer",
-        "img": "./img/SUPERS/14GAZERBEAM.png",
+        "img": "./img/SUPERS/14GAZERBEAM.jpg",
         "status": "TERMINADO",
         "threat": "6.3",
         "model": "OMNIDROID v.X5",
@@ -200,7 +200,7 @@
     {
         "name": "STORMICIDE",
         "powers": "PODERES: Ráfagas de descarga eléctrica",
-        "img": "./img/SUPERS/15STORMICIDE.png",
+        "img": "./img/SUPERS/15STORMICIDE.jpg",
         "status": "TERMINADO",
         "threat": "6.7",
         "model": "OMNIDROID v.X5",
@@ -211,7 +211,7 @@
     {
         "name": "GAMMA JACK",
         "powers": "PODERES: Estallidos de radiación controlada",
-        "img": "./img/SUPERS/16GAMMAJACK.png",
+        "img": "./img/SUPERS/16GAMMAJACK.jpg",
         "status": "ACTIVO",
         "threat": "7.9",
         "model": "OMNIDROID v.X5",
@@ -222,7 +222,7 @@
     {
         "name": "GAMMA JACK",
         "powers": "PODERES: Estallidos de radiación controlada",
-        "img": "./img/SUPERS/16GAMMAJACK.png",
+        "img": "./img/SUPERS/16GAMMAJACK.jpg",
         "status": "TERMINADO",
         "threat": "7.9",
         "model": "OMNIDROID v.X6",
@@ -233,7 +233,7 @@
     {
         "name": "SPLASHDOWN",
         "powers": "PODERES: Vuelo, respiración acuática",
-        "img": "./img/SUPERS/17SPLASHDOWN.png",
+        "img": "./img/SUPERS/17SPLASHDOWN.jpg",
         "status": "TERMINADO",
         "threat": "7.4",
         "model": "OMNIDROID v.X6",
@@ -244,7 +244,7 @@
     {
         "name": "PLASMABOLT",
         "powers": "PODERES: Vuelo, emisión de ondas de plasma",
-        "img": "./img/SUPERS/18PLASMABOLT.png",
+        "img": "./img/SUPERS/18PLASMABOLT.jpg",
         "status": "ACTIVO",
         "threat": "8.2",
         "model": "OMNIDROID v.X6",
@@ -255,7 +255,7 @@
     {
         "name": "PLASMABOLT",
         "powers": "PODERES: Vuelo, emisión de ondas de plasma",
-        "img": "./img/SUPERS/18PLASMABOLT.png",
+        "img": "./img/SUPERS/18PLASMABOLT.jpg",
         "status": "TERMINADO",
         "threat": "8.2",
         "model": "OMNIDROID v.X7",
@@ -266,7 +266,7 @@
     {
         "name": "META MAN",
         "powers": "PODERES: Vuelo, superfuerza, visión de rayos X, manipulación magnética, teletransportación, invisibilidad",
-        "img": "./img/SUPERS/19METAMAN.png",
+        "img": "./img/SUPERS/19METAMAN.jpg",
         "status": "ACTIVO",
         "threat": "8.9",
         "model": "OMNIDROID v.X7",
@@ -277,7 +277,7 @@
     {
         "name": "META MAN",
         "powers": "PODERES: Vuelo, superfuerza, visión de rayos X, manipulación magnética, teletransportación, invisibilidad",
-        "img": "./img/SUPERS/19METAMAN.png",
+        "img": "./img/SUPERS/19METAMAN.jpg",
         "status": "TERMINADO",
         "threat": "8.9",
         "model": "OMNIDROID v.X8",
@@ -288,7 +288,7 @@
     {
         "name": "MR. INCREDIBLE",
         "powers": "PODERES: Fuerza sobrehumana capaz de levantar pesos superiores a 50 toneladas, invulnerabilidad a altos niveles de fatiga.",
-        "img": "./img/SUPERS/20MRINCREIBLE.png",
+        "img": "./img/SUPERS/20MRINCREIBLE.jpg",
         "status": "ACTIVO",
         "threat": "9.1",
         "model": "OMNIDROID v.X8",
@@ -299,7 +299,7 @@
     {
         "name": "MR. INCREDIBLE",
         "powers": "PODERES: Fuerza sobrehumana capaz de levantar pesos superiores a 50 toneladas, invulnerabilidad a altos niveles de fatiga.",
-        "img": "./img/SUPERS/20MRINCREIBLE.png",
+        "img": "./img/SUPERS/20MRINCREIBLE.jpg",
         "status": "TERMINADO",
         "threat": "9.1",
         "model": "OMNIDROID v.X9",

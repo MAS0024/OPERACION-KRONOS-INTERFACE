@@ -339,7 +339,6 @@ body, html {
     background: none; 
     border: none !important;
     box-shadow: none !important;
-    -webkit-background-clip: border-box;
     text-shadow: none;
     padding: 0;
 }
