@@ -1,6 +1,8 @@
 # LINK: https://operacionkronos.netlify.app/
 ---
+
 El objetivo de este proyecto me fue en realizar una adaptación de la interfaz del PROYECTO KRONOS de una escena de LOS INCREIBLES (2004), aplicando lo aprendido con HTML, CSS Y JavaScript, pero a un diseño un tanto más oscuro y minimalista (si se le puede decir asi), localizando toda la experiencia al español para ofrecer una consola inmersiva y retrofuturista que se siente tanto clásica como moderna(incluyendo la de poder tambien navegar a traves del teclado).
+
 ---
 ### Tecnologías utilizadas
 * HTML5, CSS3 y JavaScript
